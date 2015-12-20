@@ -8,7 +8,8 @@
 
 import Foundation
 class loginVC: UIViewController {
+    
     override func viewDidLoad() {
-        self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Trash, target: self.revealViewController(), action: Selector("revealToggle:"))
     }
 }

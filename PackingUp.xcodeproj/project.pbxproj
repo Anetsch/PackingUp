@@ -14,6 +14,7 @@
 		4BAACDCE1C26C33700B00AE5 /* settingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAACDCD1C26C33700B00AE5 /* settingsVC.swift */; };
 		4BAACDD11C26C40600B00AE5 /* profilVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAACDD01C26C40600B00AE5 /* profilVC.swift */; };
 		4BAACDD31C26C43100B00AE5 /* loginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAACDD21C26C43100B00AE5 /* loginVC.swift */; };
+		4BAACDD51C271BA500B00AE5 /* itemsInListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAACDD41C271BA500B00AE5 /* itemsInListVC.swift */; };
 		A94A41CC1C25A7F600FCCF13 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94A41CB1C25A7F600FCCF13 /* AppDelegate.swift */; };
 		A94A41CE1C25A7F600FCCF13 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94A41CD1C25A7F600FCCF13 /* ViewController.swift */; };
 		A94A41D11C25A7F600FCCF13 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A94A41CF1C25A7F600FCCF13 /* Main.storyboard */; };
@@ -50,6 +51,7 @@
 		4BAACDCD1C26C33700B00AE5 /* settingsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = settingsVC.swift; sourceTree = "<group>"; };
 		4BAACDD01C26C40600B00AE5 /* profilVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = profilVC.swift; path = ../profilVC.swift; sourceTree = "<group>"; };
 		4BAACDD21C26C43100B00AE5 /* loginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = loginVC.swift; sourceTree = "<group>"; };
+		4BAACDD41C271BA500B00AE5 /* itemsInListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = itemsInListVC.swift; sourceTree = "<group>"; };
 		A94A41C81C25A7F600FCCF13 /* PackingUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PackingUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A94A41CB1C25A7F600FCCF13 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A94A41CD1C25A7F600FCCF13 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 		4BAACDCF1C26C35300B00AE5 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				4BAACDD41C271BA500B00AE5 /* itemsInListVC.swift */,
 				4BAACDD01C26C40600B00AE5 /* profilVC.swift */,
 				4BAACDD21C26C43100B00AE5 /* loginVC.swift */,
 				4B8539901C25C5250075A54B /* exploreListsVC.swift */,
@@ -299,6 +302,7 @@
 			files = (
 				4B8539911C25C5250075A54B /* exploreListsVC.swift in Sources */,
 				A94A41CE1C25A7F600FCCF13 /* ViewController.swift in Sources */,
+				4BAACDD51C271BA500B00AE5 /* itemsInListVC.swift in Sources */,
 				4B85398F1C25C50C0075A54B /* packingListsVC.swift in Sources */,
 				A94A41CC1C25A7F600FCCF13 /* AppDelegate.swift in Sources */,
 				4BAACDCE1C26C33700B00AE5 /* settingsVC.swift in Sources */,
