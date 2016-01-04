@@ -11,13 +11,36 @@ import Foundation
 class BackTableVC: UITableViewController {
     
     var TableArray = [String]()
+    let effect = UIBlurEffect(style: .Light)
+    let resizingMask = UIViewAutoresizing.FlexibleWidth
     
     override func viewDidLoad() {
         //Menü Punkte ! Achtung Segue müssen auch angepasst werden!
         
         TableArray = ["Packlisten","Entdecken","Profil bearbeiten","Einstellungen","Abmelden"]
         
-        tableView.backgroundColor = UIColor(red: 0.1, green: 0.1, blue: 0.1, alpha: 1.0)
+       // tableView.backgroundColor = UIColor(patternImage: UIImage(named: "login_Screen")!)
+        let backgroundView = UIView(frame: view.bounds)
+        backgroundView.autoresizingMask = resizingMask
+        backgroundView.addSubview(self.buildImageView())
+        backgroundView.addSubview(self.buildBlurView())
+        
+        tableView.backgroundView = backgroundView
+        tableView.separatorEffect = UIVibrancyEffect(forBlurEffect: effect)
+    }
+    
+    func buildImageView() -> UIImageView {
+        let imageView = UIImageView(image: UIImage(named: "login_Screen"))
+        imageView.frame = view.bounds
+        imageView.autoresizingMask = resizingMask
+        return imageView
+    }
+    
+    func buildBlurView() -> UIVisualEffectView {
+        let blurView = UIVisualEffectView(effect: effect)
+        blurView.frame = view.bounds
+        blurView.autoresizingMask = resizingMask
+        return blurView
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -28,10 +51,12 @@ class BackTableVC: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier(TableArray[indexPath.row], forIndexPath: indexPath) as UITableViewCell
         
         cell.textLabel?.text = TableArray[indexPath.row]
-        cell.backgroundColor = UIColor(red: 0.1, green: 0.1, blue: 0.1, alpha: 1.0)
         cell.textLabel?.textColor = UIColor.whiteColor()
+        cell.backgroundColor = UIColor.clearColor()
         return cell
     }
+       
+
     
 
     
