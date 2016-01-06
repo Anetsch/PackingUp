@@ -12,24 +12,46 @@ class packingListsVC : UITableViewController, UIAlertViewDelegate {
     
     var packLists : [String] = ["BusinessTrip","Thailand"]
     var newPackList : String = ""
+    let resizingMask = UIViewAutoresizing.FlexibleWidth
   
-
     
     override func viewDidLoad() {
+    //Farbanpassung für die NavigationBar
+        self.navigationController!.navigationBar.barTintColor = UIColor(red: 160.0/255, green: 198.0/255, blue: 55.0/255, alpha: 1.0)
+        self.navigationController!.navigationBar.tintColor = UIColor.whiteColor()
+        
     //##########SideMenu wird im Code gesetzt##########
-     navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Trash, target: self.revealViewController(), action: Selector("revealToggle:"))
-  
-  //   self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
-   
+     navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "Hamburger_4"), style: .Plain, target: self.revealViewController(), action: Selector("revealToggle:"))
+        
+        
+        let backgroundView = UIView(frame: view.bounds)
+        backgroundView.autoresizingMask = resizingMask
+        backgroundView.addSubview(self.buildImageView())
+        tableView.backgroundView = backgroundView
+        
+        
+        self.tableView.rowHeight = 60.0
+        
+        tableView.separatorColor = UIColor.whiteColor()
+        tableView.separatorStyle = .SingleLineEtched
+        tableView.opaque = false
     
+    }
+
     
+    func buildImageView() -> UIImageView {
+        let imageView = UIImageView(image: UIImage(named: "light_background_1"))
+        imageView.frame = view.bounds
+        imageView.autoresizingMask = resizingMask
+        return imageView
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("listCell", forIndexPath: indexPath)
         
         cell.textLabel?.text = packLists[indexPath.row]
-        
+        cell.tintColor = UIColor.whiteColor()
+        cell.backgroundColor = UIColor(red: 160.0/255, green: 198.0/255, blue: 55.0/255, alpha: 0.5)
         return cell
     }
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -58,7 +80,7 @@ class packingListsVC : UITableViewController, UIAlertViewDelegate {
             
         }
         addAction.enabled = false
-        //##########Erst aktivieren wenn ein Buchstabe eingegeben wurde##########
+//##########Erst aktivieren wenn ein Buchstabe eingegeben wurde##########
         alertController.addTextFieldWithConfigurationHandler { (textField) in
             textField.placeholder = "Name"
             NSNotificationCenter.defaultCenter().addObserverForName(UITextFieldTextDidChangeNotification, object: textField, queue: NSOperationQueue.mainQueue()) { (notification) in

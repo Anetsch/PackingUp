@@ -21,8 +21,6 @@ class loginVC: UIViewController {
         nameTf.backgroundColor = UIColor(red: 160.0/255, green: 198.0/255, blue: 55.0/255, alpha: 1.0)
         passwordTf.backgroundColor = UIColor(red: 160.0/255, green: 198.0/255, blue: 55.0/255, alpha: 1.0)
         
-        
-        
     }
     override func prefersStatusBarHidden() -> Bool {
         return navigationController?.navigationBarHidden == true
