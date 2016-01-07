@@ -14,7 +14,20 @@ class exploreListsVC : UIViewController, MGLMapViewDelegate{
     @IBOutlet weak var Container: UIView!
     
     override func viewDidLoad() {
-        self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+       
+        
+        
+        //Farbanpassung für die NavigationBar
+        self.navigationController!.navigationBar.barTintColor = UIColor(red: 160.0/255, green: 198.0/255, blue: 55.0/255, alpha: 1.0)
+        self.navigationController!.navigationBar.tintColor = UIColor.whiteColor()
+        
+        //##########SideMenu wird im Code gesetzt##########
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "Hamburger_4"), style: .Plain, target: self.revealViewController(), action: Selector("revealToggle:"))
+        self.navigationController?.navigationBar.topItem?.title = "Entdecken"
+        self.navigationController!.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName : UIColor.whiteColor()]
+
+
+        
         
         // initialize the map view
         mapView = MGLMapView(frame: Container.bounds, styleURL: MGLStyle.lightStyleURL())
