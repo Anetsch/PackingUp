@@ -5,7 +5,7 @@
 	<key>MGLMapboxAccessToken</key>
 	<string>pk.eyJ1IjoiYW5ldHNjaCIsImEiOiJjaWoyenJzdXEwMDB0dmdtMmp2Y3FuYnh3In0.eoe7KP0dFbzNp5aiQQjgOA</string>
 	<key>CFBundleDevelopmentRegion</key>
-	<string>en</string>
+	<string>de_DE</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
