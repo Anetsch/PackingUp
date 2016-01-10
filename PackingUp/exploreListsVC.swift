@@ -36,7 +36,9 @@ class exploreListsVC : UIViewController, MGLMapViewDelegate{
         mapView.pitchEnabled = false
         mapView.rotateEnabled = false
         
-        Container.addSubview(mapView)
+        
+        
+        self.Container.addSubview(mapView)
         makeAnnotations()
         
     }
@@ -57,6 +59,11 @@ class exploreListsVC : UIViewController, MGLMapViewDelegate{
     func mapView(mapView: MGLMapView, annotationCanShowCallout annotation: MGLAnnotation) -> Bool {
         return true
     }
+    
+    func mapView(mapView: MGLMapView, regionDidChangeAnimated animated: Bool) {
+        var zoom = mapView.zoomLevel
+        print(zoom)
+    }
     // wenn anotation angetippt wird
     func mapView(mapView: MGLMapView, didSelectAnnotation annotation: MGLAnnotation) {
         annotation.title
@@ -65,6 +72,18 @@ class exploreListsVC : UIViewController, MGLMapViewDelegate{
     //wenn anotation text angetippt wird
     func mapView(mapView: MGLMapView, tapOnCalloutForAnnotation annotation: MGLAnnotation) {
         print("Didselect Annotation text \(annotation.title)")
+        let left = CLLocationCoordinate2D(latitude: 21.806238, longitude: -135.859375)
+        let right = CLLocationCoordinate2D(latitude: 65.009923, longitude: -69.414063)
+        let map = MGLCoordinateBounds(sw: left, ne: right)
+       
+
+        
+        mapView.setVisibleCoordinateBounds(map, animated: true)
+    mapView.zoomLevel = 1
+        
+//        mapView.setCenterCoordinate(CLLocationCoordinate2D(latitude: 39.117969, longitude: -103.867188),
+//            zoomLevel: 1.18026536560642, animated: true)
+        
     }
     
     
