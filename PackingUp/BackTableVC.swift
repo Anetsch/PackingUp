@@ -50,7 +50,7 @@ class BackTableVC: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(TableArray[indexPath.row], forIndexPath: indexPath) as UITableViewCell
         
-        cell.textLabel?.text = TableArray[indexPath.row]
+      //  cell.textLabel?.text = TableArray[indexPath.row]
         cell.textLabel?.textColor = UIColor.whiteColor()
         cell.backgroundColor = UIColor.clearColor()
         return cell

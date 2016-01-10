@@ -108,10 +108,10 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="KKC-Si-05D">
-                                            <rect key="frame" x="86" y="18" width="32" height="20"/>
+                                            <rect key="frame" x="74" y="18" width="32" height="20"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fRf-BQ-ddO">
@@ -121,8 +121,8 @@
                                             <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="jill-profile-round" id="xwq-gp-ED1">
-                                            <rect key="frame" x="15" y="0.0" width="56" height="56"/>
+                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="Hamburger_4" id="xwq-gp-ED1">
+                                            <rect key="frame" x="15" y="6" width="44" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </imageView>
                                     </subviews>
@@ -189,7 +189,7 @@
                                 <rect key="frame" x="104" y="158" width="71" height="30"/>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -298,23 +298,21 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Packlisten" textLabel="C2E-8A-y5S" imageView="Qll-Rw-12R" style="IBUITableViewCellStyleDefault" id="pFl-PM-a57">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Packlisten" id="pFl-PM-a57">
                                 <rect key="frame" x="0.0" y="196" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pFl-PM-a57" id="7v1-yW-Sdf">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="C2E-8A-y5S">
-                                            <rect key="frame" x="74" y="0.0" width="231" height="44"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" fixedFrame="YES" text="Packlisten" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cLz-0a-fMG">
+                                            <rect key="frame" x="71" y="0.0" width="231" height="44"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="Hamburger_4" id="Qll-Rw-12R">
-                                            <rect key="frame" x="15" y="0.0" width="44" height="44"/>
-                                            <autoresizingMask key="autoresizingMask"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Packliste" translatesAutoresizingMaskIntoConstraints="NO" id="0R1-tJ-d4F">
+                                            <rect key="frame" x="38" y="9" width="25" height="25"/>
                                         </imageView>
                                     </subviews>
                                 </tableViewCellContentView>
@@ -322,23 +320,21 @@
                                     <segue destination="YHN-IG-irU" kind="custom" identifier="Packlisten" customClass="SWRevealViewControllerSeguePushController" id="7dw-jw-NHg"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Entdecken" textLabel="3Cz-jU-3Xk" imageView="Iuh-kS-dZ1" style="IBUITableViewCellStyleDefault" id="VH2-tO-iq2">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Entdecken" id="VH2-tO-iq2">
                                 <rect key="frame" x="0.0" y="240" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VH2-tO-iq2" id="XOG-Wf-NRD">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3Cz-jU-3Xk">
-                                            <rect key="frame" x="74" y="0.0" width="231" height="44"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" fixedFrame="YES" text="Entdecken" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xal-mv-zlF">
+                                            <rect key="frame" x="71" y="0.0" width="231" height="44"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="Hamburger_4" id="Iuh-kS-dZ1">
-                                            <rect key="frame" x="15" y="0.0" width="44" height="44"/>
-                                            <autoresizingMask key="autoresizingMask"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Entdecken-1" translatesAutoresizingMaskIntoConstraints="NO" id="0iF-Pi-Hmg">
+                                            <rect key="frame" x="38" y="9" width="25" height="25"/>
                                         </imageView>
                                     </subviews>
                                 </tableViewCellContentView>
@@ -346,23 +342,21 @@
                                     <segue destination="Bl4-vG-TkU" kind="custom" identifier="Entdecken" customClass="SWRevealViewControllerSeguePushController" id="WgH-uf-1np"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Profil bearbeiten" textLabel="ync-j9-Vpn" imageView="Jw7-Yq-SGQ" style="IBUITableViewCellStyleDefault" id="NSL-bN-JKE">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Profil bearbeiten" id="NSL-bN-JKE">
                                 <rect key="frame" x="0.0" y="284" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NSL-bN-JKE" id="RTz-qH-JTr">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ync-j9-Vpn">
-                                            <rect key="frame" x="74" y="0.0" width="231" height="44"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" fixedFrame="YES" text="Profil bearbeiten" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XbB-f0-w4N">
+                                            <rect key="frame" x="71" y="0.0" width="231" height="44"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="Hamburger_4" id="Jw7-Yq-SGQ">
-                                            <rect key="frame" x="15" y="0.0" width="44" height="44"/>
-                                            <autoresizingMask key="autoresizingMask"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Profil bearbeiten-1" translatesAutoresizingMaskIntoConstraints="NO" id="hno-pe-L05">
+                                            <rect key="frame" x="38" y="9" width="25" height="25"/>
                                         </imageView>
                                     </subviews>
                                 </tableViewCellContentView>
@@ -370,23 +364,21 @@
                                     <segue destination="tFV-J5-BqY" kind="custom" identifier="Profil bearbeiten" customClass="SWRevealViewControllerSeguePushController" id="RSB-E0-aOu"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Einstellungen" textLabel="iQV-gY-Oq1" imageView="yht-Y4-rDu" style="IBUITableViewCellStyleDefault" id="Toq-mc-Gxv">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Einstellungen" id="Toq-mc-Gxv">
                                 <rect key="frame" x="0.0" y="328" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Toq-mc-Gxv" id="nOR-kp-xsj">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="iQV-gY-Oq1">
-                                            <rect key="frame" x="74" y="0.0" width="231" height="44"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" fixedFrame="YES" text="Einstellungen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A2z-8u-iPc">
+                                            <rect key="frame" x="71" y="0.0" width="231" height="44"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="Hamburger_4" id="yht-Y4-rDu">
-                                            <rect key="frame" x="15" y="0.0" width="44" height="44"/>
-                                            <autoresizingMask key="autoresizingMask"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Einstellungen" translatesAutoresizingMaskIntoConstraints="NO" id="nKQ-Zk-cQx">
+                                            <rect key="frame" x="38" y="9" width="25" height="25"/>
                                         </imageView>
                                     </subviews>
                                 </tableViewCellContentView>
@@ -394,23 +386,21 @@
                                     <segue destination="IDL-gq-Z72" kind="custom" identifier="Einstellungen" customClass="SWRevealViewControllerSeguePushController" id="7gz-ii-SMk"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Abmelden" textLabel="r35-CI-OFE" imageView="9wm-3q-3H5" style="IBUITableViewCellStyleDefault" id="OsW-dK-rhU">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Abmelden" id="OsW-dK-rhU">
                                 <rect key="frame" x="0.0" y="372" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OsW-dK-rhU" id="hp0-Gc-ddT">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="r35-CI-OFE">
-                                            <rect key="frame" x="74" y="0.0" width="231" height="44"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" fixedFrame="YES" text="Abmelden" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cxH-DZ-gyz">
+                                            <rect key="frame" x="71" y="0.0" width="231" height="44"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="Hamburger_4" id="9wm-3q-3H5">
-                                            <rect key="frame" x="15" y="0.0" width="44" height="44"/>
-                                            <autoresizingMask key="autoresizingMask"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Logout-1" translatesAutoresizingMaskIntoConstraints="NO" id="4KN-za-tFU">
+                                            <rect key="frame" x="38" y="9" width="25" height="25"/>
                                         </imageView>
                                     </subviews>
                                 </tableViewCellContentView>
@@ -623,8 +613,12 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Einstellungen" width="44" height="44"/>
+        <image name="Entdecken-1" width="44" height="44"/>
         <image name="Hamburger_4" width="44" height="44"/>
-        <image name="jill-profile-round" width="234" height="234"/>
+        <image name="Logout-1" width="44" height="44"/>
+        <image name="Packliste" width="39" height="34"/>
+        <image name="Profil bearbeiten-1" width="44" height="44"/>
         <image name="login_Screen" width="640" height="1136"/>
         <image name="profil2" width="323" height="168"/>
     </resources>
