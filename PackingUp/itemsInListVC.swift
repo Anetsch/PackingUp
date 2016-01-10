@@ -22,6 +22,7 @@ class itemsInListVC : UITableViewController {
     var kategory = [String]()
     let resizingMask = UIViewAutoresizing.FlexibleWidth
     
+    
    
     var currentList = ""
     override func viewDidLoad() {
@@ -99,6 +100,7 @@ class itemsInListVC : UITableViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("itemCell", forIndexPath: indexPath)
+        //cell.imageView?.image = UIImage(named: "Kreis_1")
         
         cell.textLabel?.textColor = UIColor.blackColor()
         cell.tintColor = UIColor.whiteColor()
@@ -108,8 +110,15 @@ class itemsInListVC : UITableViewController {
         
         cell.detailTextLabel?.text = "\(diceRoll) x"
         
+        var cellImage : UIImage = UIImage(named: "Kreis-1")!
+
+        cell.sizeToFit()
+        cell.clipsToBounds = true;
+        cell.imageView?.image = cellImage
+        
         if indexPath.section == 0 {
             cell.textLabel?.text = itemsBekleidung[indexPath.row]
+            
         } else if indexPath.section == 1 {
             cell.textLabel?.text = itemsDokumente[indexPath.row]
         } else if indexPath.section == 2 {
@@ -123,11 +132,7 @@ class itemsInListVC : UITableViewController {
         } else if indexPath.section == 6 {
             cell.textLabel?.text = itemsSonstiges[indexPath.row]
         }
-    
-   //     cell.backgroundColor = UIColor(red: 160.0/255, green: 198.0/255, blue: 55.0/255, alpha: 0.5)
-        // cell.backgroundColor = UIColor(red: 160.0/255, green: 198.0/255, blue: 55.0/255, alpha: 0.5)
-        
-       // cell.backgroundColor = UIColor(red: 160.0/255, green: 198.0/255, blue: 55.0/255, alpha: 0.5)
+
         
         return cell
     }
@@ -145,5 +150,11 @@ class itemsInListVC : UITableViewController {
         } else if editingStyle == .Insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }
+    }
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath){
+        
+        let cell = tableView.cellForRowAtIndexPath(indexPath)
+        
+        cell?.imageView?.image = UIImage(named: "Hamburger_4")
     }
 }
