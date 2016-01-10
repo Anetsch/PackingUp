@@ -12,6 +12,15 @@ class exploreListsVC : UIViewController, MGLMapViewDelegate{
     var mapView: MGLMapView!
 
     @IBOutlet weak var Container: UIView!
+    @IBOutlet weak var zurück: UIButton!
+    
+    let namerica = MGLPointAnnotation()
+    let samerica = MGLPointAnnotation()
+    let africa = MGLPointAnnotation()
+    let europe = MGLPointAnnotation()
+    let asia = MGLPointAnnotation()
+    let australia = MGLPointAnnotation()
+    var map = MGLCoordinateBounds()
     
     override func viewDidLoad() {
        
@@ -39,10 +48,15 @@ class exploreListsVC : UIViewController, MGLMapViewDelegate{
         
         
         self.Container.addSubview(mapView)
+        
         makeAnnotations()
         
     }
     
+    @IBAction func doZurück(sender: AnyObject) {
+        print("Zoom")
+        mapView.setZoomLevel(0, animated: true)
+    }
     
     func mapView(mapView: MGLMapView, imageForAnnotation annotation: MGLAnnotation) -> MGLAnnotationImage? {
         var annotationImage = mapView.dequeueReusableAnnotationImageWithIdentifier("green_marker")
@@ -72,9 +86,12 @@ class exploreListsVC : UIViewController, MGLMapViewDelegate{
     //wenn anotation text angetippt wird
     func mapView(mapView: MGLMapView, tapOnCalloutForAnnotation annotation: MGLAnnotation) {
         print("Didselect Annotation text \(annotation.title)")
-        let left = CLLocationCoordinate2D(latitude: 21.806238, longitude: -135.859375)
-        let right = CLLocationCoordinate2D(latitude: 65.009923, longitude: -69.414063)
-        let map = MGLCoordinateBounds(sw: left, ne: right)
+        
+        // North America
+//        let left = CLLocationCoordinate2D(latitude: 21.806238, longitude: -135.859375)
+//        let right = CLLocationCoordinate2D(latitude: 65.009923, longitude: -69.414063)
+//        let map = MGLCoordinateBounds(sw: left, ne: right)
+        zoomlocation(annotation)
        
 
         
@@ -93,41 +110,74 @@ class exploreListsVC : UIViewController, MGLMapViewDelegate{
         mapView.delegate = self
         
         // Declare the annotation `point` and set its coordinates, title, and subtitle
-        let namerica = MGLPointAnnotation()
+        
         namerica.coordinate = CLLocationCoordinate2D(latitude: 39.117969, longitude: -103.867188)
         namerica.title = "Nord-Amerika"
         namerica.subtitle = "Hier klicken für Nord-Amerika"
         mapView.addAnnotation(namerica)
         
-        let samerica = MGLPointAnnotation()
+        
         samerica.coordinate = CLLocationCoordinate2D(latitude: -14.917383, longitude: -55.351563)
         samerica.title = "Süd-Amerika"
         samerica.subtitle = "Hier klicken für Süd-Amerika"
         mapView.addAnnotation(samerica)
         
-        let africa = MGLPointAnnotation()
+        
         africa.coordinate = CLLocationCoordinate2D(latitude: 11.550874, longitude: 23.398438)
         africa.title = "Afrika"
         africa.subtitle = "Hier klicken für Afrika"
         mapView.addAnnotation(africa)
         
-        let europe = MGLPointAnnotation()
+        
         europe.coordinate = CLLocationCoordinate2D(latitude: 51.853298, longitude: 17.773438)
         europe.title = "Europa"
         europe.subtitle = "Hier klicken für Europa"
         mapView.addAnnotation(europe)
         
-        let asia = MGLPointAnnotation()
+        
         asia.coordinate = CLLocationCoordinate2D(latitude: 26.141447, longitude: 102.500000)
         asia.title = "Asien"
         asia.subtitle = "Hier klicken für Asien"
         mapView.addAnnotation(asia)
         
-        let australia = MGLPointAnnotation()
+        
         australia.coordinate = CLLocationCoordinate2D(latitude: -24.820828, longitude: 134.140625)
         australia.title = "Australien"
         australia.subtitle = "Hier klicken für Australien"
         mapView.addAnnotation(australia)
+    }
+    
+    func zoomlocation(location: MGLAnnotation){
+        let mlocation = location.title!!
+         mapView.removeAnnotation(location)
+        switch mlocation {
+        case "Nord-Amerika" :         // North America
+            let left = CLLocationCoordinate2D(latitude: 21.806238, longitude: -135.859375)
+            let right = CLLocationCoordinate2D(latitude: 65.009923, longitude: -69.414063)
+             map = MGLCoordinateBounds(sw: left, ne: right)
+           
+        case "Süd-Amerika" :
+            let left = CLLocationCoordinate2D(latitude: -55.859398, longitude: -86.289063)
+            let right = CLLocationCoordinate2D(latitude: 27.552904, longitude: -31.972656)
+             map = MGLCoordinateBounds(sw: left, ne: right)
+        case "Afrika" :
+            let left = CLLocationCoordinate2D(latitude: 21.806238, longitude: -135.859375)
+            let right = CLLocationCoordinate2D(latitude: 65.009923, longitude: -69.414063)
+             map = MGLCoordinateBounds(sw: left, ne: right)
+        case "Europa" :
+            let left = CLLocationCoordinate2D(latitude: 21.806238, longitude: -135.859375)
+            let right = CLLocationCoordinate2D(latitude: 65.009923, longitude: -69.414063)
+             map = MGLCoordinateBounds(sw: left, ne: right)
+        case "Asien" :
+            let left = CLLocationCoordinate2D(latitude: 21.806238, longitude: -135.859375)
+            let right = CLLocationCoordinate2D(latitude: 65.009923, longitude: -69.414063)
+             map = MGLCoordinateBounds(sw: left, ne: right)
+        case "Australien" :
+            let left = CLLocationCoordinate2D(latitude: 21.806238, longitude: -135.859375)
+            let right = CLLocationCoordinate2D(latitude: 65.009923, longitude: -69.414063)
+             map = MGLCoordinateBounds(sw: left, ne: right)
+        default : print("no Items found")
+        }
     }
     
     

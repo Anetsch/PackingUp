@@ -463,12 +463,20 @@
                                     <segue destination="qXx-Nn-59t" kind="embed" id="nlv-50-SkR"/>
                                 </connections>
                             </containerView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ev2-2n-ifU">
+                                <rect key="frame" x="20" y="518" width="60" height="30"/>
+                                <state key="normal" title="Zurück"/>
+                                <connections>
+                                    <action selector="doZurück:" destination="eYm-5c-Tia" eventType="touchUpInside" id="Rqc-ML-Iov"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="3FQ-LI-GGT"/>
                     <connections>
                         <outlet property="Container" destination="7a6-fI-UUf" id="1D2-aS-R82"/>
+                        <outlet property="zurück" destination="ev2-2n-ifU" id="cBF-FO-1Oa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wgy-1L-ZE9" userLabel="First Responder" sceneMemberID="firstResponder"/>
