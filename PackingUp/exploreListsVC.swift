@@ -22,6 +22,11 @@ class exploreListsVC : UIViewController, MGLMapViewDelegate{
     let australia = MGLPointAnnotation()
     var map = MGLCoordinateBounds()
     
+    var continent = [MGLPointAnnotation]()
+    
+    
+    var removedAnnotation = String()
+    
     override func viewDidLoad() {
        
         
@@ -44,18 +49,24 @@ class exploreListsVC : UIViewController, MGLMapViewDelegate{
         mapView.zoomEnabled = false
         mapView.pitchEnabled = false
         mapView.rotateEnabled = false
-        
+        mapView.scrollEnabled = false
+        mapView.delegate = self
         
         
         self.Container.addSubview(mapView)
         
         makeAnnotations()
-        
+        continent = [namerica,samerica,africa,europe,asia,australia]
     }
     
     @IBAction func doZurück(sender: AnyObject) {
-        print("Zoom")
-        mapView.setZoomLevel(0, animated: true)
+        
+        let left = CLLocationCoordinate2D(latitude: -75.708634, longitude: -15.097656)
+        let right = CLLocationCoordinate2D(latitude: 84.322415, longitude: 146.621094)
+        map = MGLCoordinateBounds(sw: left, ne: right)
+        mapView.setVisibleCoordinateBounds(map, animated: true)
+       
+        
     }
     
     func mapView(mapView: MGLMapView, imageForAnnotation annotation: MGLAnnotation) -> MGLAnnotationImage? {
@@ -74,32 +85,28 @@ class exploreListsVC : UIViewController, MGLMapViewDelegate{
         return true
     }
     
-    func mapView(mapView: MGLMapView, regionDidChangeAnimated animated: Bool) {
-        var zoom = mapView.zoomLevel
-        print(zoom)
-    }
+//    func mapView(mapView: MGLMapView, regionDidChangeAnimated animated: Bool) {
+//        var zoom = mapView.zoomLevel
+//        print(zoom)
+//    }
     // wenn anotation angetippt wird
     func mapView(mapView: MGLMapView, didSelectAnnotation annotation: MGLAnnotation) {
         annotation.title
-        print("Didselect \(annotation.title)")
+//        print("Didselect \(annotation.title)")
     }
     //wenn anotation text angetippt wird
     func mapView(mapView: MGLMapView, tapOnCalloutForAnnotation annotation: MGLAnnotation) {
-        print("Didselect Annotation text \(annotation.title)")
+//        print("Didselect Annotation text \(annotation.title)")
         
         // North America
 //        let left = CLLocationCoordinate2D(latitude: 21.806238, longitude: -135.859375)
 //        let right = CLLocationCoordinate2D(latitude: 65.009923, longitude: -69.414063)
 //        let map = MGLCoordinateBounds(sw: left, ne: right)
         zoomlocation(annotation)
-       
+       mapView.removeAnnotations(continent)
 
         
         mapView.setVisibleCoordinateBounds(map, animated: true)
-    mapView.zoomLevel = 1
-        
-//        mapView.setCenterCoordinate(CLLocationCoordinate2D(latitude: 39.117969, longitude: -103.867188),
-//            zoomLevel: 1.18026536560642, animated: true)
         
     }
     
@@ -107,7 +114,7 @@ class exploreListsVC : UIViewController, MGLMapViewDelegate{
     
     func makeAnnotations(){
         // Set the delegate property of our map view to self after instantiating it.
-        mapView.delegate = self
+
         
         // Declare the annotation `point` and set its coordinates, title, and subtitle
         
@@ -149,9 +156,8 @@ class exploreListsVC : UIViewController, MGLMapViewDelegate{
     
     func zoomlocation(location: MGLAnnotation){
         let mlocation = location.title!!
-         mapView.removeAnnotation(location)
         switch mlocation {
-        case "Nord-Amerika" :         // North America
+        case "Nord-Amerika" :
             let left = CLLocationCoordinate2D(latitude: 21.806238, longitude: -135.859375)
             let right = CLLocationCoordinate2D(latitude: 65.009923, longitude: -69.414063)
              map = MGLCoordinateBounds(sw: left, ne: right)
