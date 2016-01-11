@@ -459,13 +459,21 @@
                                     <segue destination="qXx-Nn-59t" kind="embed" id="nlv-50-SkR"/>
                                 </connections>
                             </containerView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ev2-2n-ifU">
-                                <rect key="frame" x="20" y="518" width="60" height="30"/>
-                                <state key="normal" title="Zurück"/>
-                                <connections>
-                                    <action selector="doZurück:" destination="eYm-5c-Tia" eventType="touchUpInside" id="Rqc-ML-Iov"/>
-                                </connections>
-                            </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9yC-gE-AYd">
+                                <rect key="frame" x="0.0" y="523" width="320" height="45"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ev2-2n-ifU">
+                                        <rect key="frame" x="15" y="8" width="60" height="30"/>
+                                        <state key="normal" title="Zurück">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="doZurück:" destination="eYm-5c-Tia" eventType="touchUpInside" id="Rqc-ML-Iov"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.62745098039215685" green="0.77647058823529413" blue="0.21568627450980393" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
