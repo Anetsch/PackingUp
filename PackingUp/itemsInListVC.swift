@@ -155,6 +155,6 @@ class itemsInListVC : UITableViewController {
         
         let cell = tableView.cellForRowAtIndexPath(indexPath)
         
-        cell?.imageView?.image = UIImage(named: "Hamburger_4")
+        cell?.imageView?.image = UIImage(named: "HakenMitKreis")
     }
 }
