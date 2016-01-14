@@ -51,7 +51,7 @@ class packingListsVC : UITableViewController, UIAlertViewDelegate {
         
         cell.textLabel?.text = packLists[indexPath.row]
         cell.tintColor = UIColor.whiteColor()
-        cell.backgroundColor = UIColor(red: 160.0/255, green: 198.0/255, blue: 55.0/255, alpha: 0.5)
+        cell.backgroundColor = UIColor(red: 74.0/255, green: 100.0/255, blue: 97.0/255, alpha: 1.0)
         return cell
     }
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

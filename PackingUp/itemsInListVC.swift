@@ -70,7 +70,10 @@ class itemsInListVC : UITableViewController {
     }
     override func tableView(tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
         let header: UITableViewHeaderFooterView = view as! UITableViewHeaderFooterView //recast your view as a UITableViewHeaderFooterView
-        header.contentView.backgroundColor = UIColor(red: 160.0/255, green: 198.0/255, blue: 55.0/255, alpha: 1.0) //make the background color light blue
+        header.contentView.backgroundColor = UIColor(red: 74.0/255, green: 100.0/255, blue: 97.0/255, alpha: 1.0)
+ //make the background color light blue
+       // header.textLabel!.textColor = UIColor(red: 58.0/255, green: 80.0/255, blue: 94.0/255, alpha: 1.0)
+        
         header.textLabel!.textColor = UIColor.whiteColor() //make the text white
         header.textLabel?.textAlignment = .Center
         
@@ -105,12 +108,12 @@ class itemsInListVC : UITableViewController {
         cell.textLabel?.textColor = UIColor.blackColor()
         cell.tintColor = UIColor.whiteColor()
         cell.backgroundColor = UIColor.clearColor()
-        cell.contentView.backgroundColor = UIColor(red: 160.0/255, green: 198.0/255, blue: 55.0/255, alpha: 0.5)
+        cell.contentView.backgroundColor = UIColor(red: 136.0/255, green: 170.0/255, blue: 78.0/255, alpha: 0.3)
         let diceRoll = Int(arc4random_uniform(6) + 1)
         
         cell.detailTextLabel?.text = "\(diceRoll) x"
         
-        var cellImage : UIImage = UIImage(named: "Kreis-1")!
+        let cellImage : UIImage = UIImage(named: "Kreis_Klein")!
 
         cell.sizeToFit()
         cell.clipsToBounds = true;

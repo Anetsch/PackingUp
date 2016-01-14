@@ -41,7 +41,7 @@ class profilVC : UIViewController {
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "Hamburger_4"), style: .Plain, target: self.revealViewController(), action: Selector("revealToggle:"))
         
         UIGraphicsBeginImageContext(self.view.frame.size)
-        UIImage(named: "light_background_1")?.drawInRect(self.view.bounds)
+        UIImage(named: "light_background_2")?.drawInRect(self.view.bounds)
         let image: UIImage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         
@@ -50,9 +50,10 @@ class profilVC : UIViewController {
         
         female.setBackgroundImage(imageFemaleSelected, forState: UIControlState.Normal)
         
-        tfName.backgroundColor = UIColor(red: 160.0/255, green: 198.0/255, blue: 55.0/255, alpha: 1.0)
-        tfEmail.backgroundColor = UIColor(red: 160.0/255, green: 198.0/255, blue: 55.0/255, alpha: 1.0)
-        
+        tfName.backgroundColor = UIColor(red: 113.0/255, green: 145.0/255, blue: 90.0/255, alpha: 0.5)
+        tfEmail.backgroundColor = UIColor(red: 113.0/255, green: 145.0/255, blue: 90.0/255, alpha: 0.5)
+        tfName.layer.borderColor = (UIColor(red: 93.0/255, green: 122.0/255, blue: 96.0/255, alpha: 1.0)).CGColor
+        tfEmail.layer.borderColor = (UIColor(red: 93.0/255, green: 122.0/255, blue: 96.0/255, alpha: 1.0)).CGColor
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
         view.addGestureRecognizer(tap)
     }
