@@ -527,7 +527,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wgy-1L-ZE9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1459" y="89"/>
+            <point key="canvasLocation" x="1439" y="96"/>
         </scene>
         <!--SettingsVC-->
         <scene sceneID="Ped-6j-9n1">
@@ -707,7 +707,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iFP-aS-Sf1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1927" y="89"/>
+            <point key="canvasLocation" x="1922" y="485"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="GfI-s4-6uO">
@@ -762,6 +762,37 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LzN-cw-NRN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="79" y="-777"/>
+        </scene>
+        <!--Explore Lists DetailVC-->
+        <scene sceneID="Ssq-C0-HSX">
+            <objects>
+                <viewController storyboardIdentifier="exploreListsDetailVC" id="vOa-2y-v80" customClass="exploreListsDetailVC" customModule="PackingUp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6WG-Ja-ph1"/>
+                        <viewControllerLayoutGuide type="bottom" id="xCv-wa-tOt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ik4-Tz-6F0">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yhV-qM-oKp">
+                                <rect key="frame" x="0.0" y="64" width="320" height="182"/>
+                            </containerView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OYX-v6-u1O">
+                                <rect key="frame" x="0.0" y="523" width="320" height="45"/>
+                                <color key="backgroundColor" red="0.62745098040000002" green="0.77647058820000003" blue="0.2156862745" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="rXb-Aq-CK1"/>
+                    <connections>
+                        <outlet property="Container" destination="yhV-qM-oKp" id="HQs-2c-swW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sKe-2o-qxP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2326" y="96"/>
         </scene>
     </scenes>
     <resources>

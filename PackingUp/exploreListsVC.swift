@@ -69,6 +69,7 @@ class exploreListsVC : UIViewController, MGLMapViewDelegate{
     
     
     var removedAnnotation = String()
+    var zoomed: Bool = false
     
     override func viewDidLoad() {
        
@@ -115,20 +116,23 @@ class exploreListsVC : UIViewController, MGLMapViewDelegate{
     }
     
     @IBAction func doZurück(sender: AnyObject) {
-        mapView.addAnnotations(continent)
+        print("before remove")
         mapView.removeAnnotations(namericaArray)
         mapView.removeAnnotations(samericaArray)
         mapView.removeAnnotations(africaArray)
         mapView.removeAnnotations(europeArray)
         mapView.removeAnnotations(asiaArray)
         mapView.removeAnnotations(australiaArray)
+        mapView.addAnnotations(continent)
+        print("after remove")
         mapView.scrollEnabled = true
         let left = CLLocationCoordinate2D(latitude: -75.708634, longitude: -15.097656)
         let right = CLLocationCoordinate2D(latitude: 84.322415, longitude: 146.621094)
         map = MGLCoordinateBounds(sw: left, ne: right)
         mapView.setVisibleCoordinateBounds(map, animated: true)
+        
         zurück.hidden = true
-       
+       zoomed = false
         
     }
     
@@ -160,7 +164,11 @@ class exploreListsVC : UIViewController, MGLMapViewDelegate{
     
     //wenn anotation text angetippt wird
     func mapView(mapView: MGLMapView, tapOnCalloutForAnnotation annotation: MGLAnnotation) {
+        if zoomed == true{
+            let detailViewController = storyboard?.instantiateViewControllerWithIdentifier("exploreListsDetailVC") as! exploreListsDetailVC
+            navigationController?.pushViewController(detailViewController, animated: true)}
         zoomlocation(annotation)
+        
         mapView.addAnnotations(namericaArray)
         mapView.addAnnotations(samericaArray)
         mapView.addAnnotations(africaArray)
@@ -169,8 +177,30 @@ class exploreListsVC : UIViewController, MGLMapViewDelegate{
         mapView.addAnnotations(australiaArray)
        mapView.removeAnnotations(continent)
         mapView.setVisibleCoordinateBounds(map, animated: true)
-        
+       
     }
+    
+//    func settingAnnotations(){
+//        if zoomed == false{
+//            mapView.addAnnotations(namericaArray)
+//            mapView.addAnnotations(samericaArray)
+//            mapView.addAnnotations(africaArray)
+//            mapView.addAnnotations(europeArray)
+//            mapView.addAnnotations(asiaArray)
+//            mapView.addAnnotations(australiaArray)
+//            mapView.removeAnnotations(continent)
+//        }
+//        else {
+//            mapView.removeAnnotations(namericaArray)
+//            mapView.removeAnnotations(samericaArray)
+//            mapView.removeAnnotations(africaArray)
+//            mapView.removeAnnotations(europeArray)
+//            mapView.removeAnnotations(asiaArray)
+//            mapView.removeAnnotations(australiaArray)
+//            mapView.addAnnotations(continent)
+//
+//        }
+//    }
     
     
     
@@ -219,6 +249,7 @@ class exploreListsVC : UIViewController, MGLMapViewDelegate{
     }
     
     func zoomlocation(location: MGLAnnotation){
+        zoomed = true
         zurück.hidden = false
         mapView.scrollEnabled = false
         let mlocation = location.title!!

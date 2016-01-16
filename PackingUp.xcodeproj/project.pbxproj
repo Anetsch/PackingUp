@@ -26,6 +26,7 @@
 		A94A41D61C25A7F700FCCF13 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A94A41D41C25A7F700FCCF13 /* LaunchScreen.storyboard */; };
 		A94A41E11C25A7F700FCCF13 /* PackingUpTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94A41E01C25A7F700FCCF13 /* PackingUpTests.swift */; };
 		A94A41EC1C25A7F800FCCF13 /* PackingUpUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94A41EB1C25A7F800FCCF13 /* PackingUpUITests.swift */; };
+		A94C55771C4915FE00668299 /* exploreListsDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94C55761C4915FE00668299 /* exploreListsDetailVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		A94A41E71C25A7F800FCCF13 /* PackingUpUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PackingUpUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A94A41EB1C25A7F800FCCF13 /* PackingUpUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackingUpUITests.swift; sourceTree = "<group>"; };
 		A94A41ED1C25A7F800FCCF13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A94C55761C4915FE00668299 /* exploreListsDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = exploreListsDetailVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +131,7 @@
 				4BAACDD41C271BA500B00AE5 /* itemsInListVC.swift */,
 				4BAACDD01C26C40600B00AE5 /* profilVC.swift */,
 				4BAACDD21C26C43100B00AE5 /* loginVC.swift */,
+				A94C55761C4915FE00668299 /* exploreListsDetailVC.swift */,
 				4B8539901C25C5250075A54B /* exploreListsVC.swift */,
 				4B85398E1C25C50C0075A54B /* packingListsVC.swift */,
 				4BAACDCD1C26C33700B00AE5 /* settingsVC.swift */,
@@ -398,6 +401,7 @@
 				4BAACDD11C26C40600B00AE5 /* profilVC.swift in Sources */,
 				4BAACDD31C26C43100B00AE5 /* loginVC.swift in Sources */,
 				4B85398B1C25B06C0075A54B /* SWRevealViewController.m in Sources */,
+				A94C55771C4915FE00668299 /* exploreListsDetailVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
