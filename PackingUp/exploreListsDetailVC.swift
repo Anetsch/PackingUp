@@ -19,18 +19,11 @@ class exploreListsDetailVC : UIViewController, MGLMapViewDelegate{
     var map = MGLCoordinateBounds()
 
     override func viewDidLoad() {
-        
-        
-        
+ 
         //Farbanpassung für die NavigationBar
         self.navigationController!.navigationBar.barTintColor = UIColor(red: 160.0/255, green: 198.0/255, blue: 55.0/255, alpha: 1.0)
         self.navigationController!.navigationBar.tintColor = UIColor.whiteColor()
-        
 
-        
-        
-        
-        
         // initialize the map view
         mapView = MGLMapView(frame: Container.bounds, styleURL: MGLStyle.lightStyleURL())
         mapView.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
@@ -39,7 +32,7 @@ class exploreListsDetailVC : UIViewController, MGLMapViewDelegate{
         mapView.rotateEnabled = false
         mapView.scrollEnabled = true
         mapView.delegate = self
-        
+        mapView.setVisibleCoordinateBounds(map, animated: true)
         
         self.Container.addSubview(mapView)
 

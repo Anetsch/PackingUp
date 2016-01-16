@@ -13,7 +13,6 @@ class packingListsVC : UITableViewController, UIAlertViewDelegate {
     var packLists : [String] = ["BusinessTrip","Thailand"]
     var newPackList : String = ""
     let resizingMask = UIViewAutoresizing.FlexibleWidth
-  
     
     override func viewDidLoad() {
     //Farbanpassung für die NavigationBar
@@ -23,12 +22,10 @@ class packingListsVC : UITableViewController, UIAlertViewDelegate {
     //##########SideMenu wird im Code gesetzt##########
      navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "Hamburger_4"), style: .Plain, target: self.revealViewController(), action: Selector("revealToggle:"))
         
-        
         let backgroundView = UIView(frame: view.bounds)
         backgroundView.autoresizingMask = resizingMask
         backgroundView.addSubview(self.buildImageView())
         tableView.backgroundView = backgroundView
-        
         
         self.tableView.rowHeight = 60.0
         
@@ -37,8 +34,7 @@ class packingListsVC : UITableViewController, UIAlertViewDelegate {
         tableView.opaque = false
     
     }
-
-    
+ 
     func buildImageView() -> UIImageView {
         let imageView = UIImageView(image: UIImage(named: "light_background_1"))
         imageView.frame = view.bounds
@@ -58,8 +54,7 @@ class packingListsVC : UITableViewController, UIAlertViewDelegate {
         return packLists.count
     }
     
-//##########Neue Packlisten Hinzufügen##########
-    
+//##########Neue Packlisten Hinzufügen##########    
     @IBAction func addList(sender: AnyObject) {
         let alertController = UIAlertController(title: "Neue Packliste", message: "Bitte geben Sie den Namen für die neue Packliste ein", preferredStyle: .Alert)
         

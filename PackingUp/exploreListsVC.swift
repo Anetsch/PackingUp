@@ -115,16 +115,10 @@ class exploreListsVC : UIViewController, MGLMapViewDelegate{
         zurück.hidden = true
     }
     
+    
+    
     @IBAction func doZurück(sender: AnyObject) {
-        print("before remove")
-        mapView.removeAnnotations(namericaArray)
-        mapView.removeAnnotations(samericaArray)
-        mapView.removeAnnotations(africaArray)
-        mapView.removeAnnotations(europeArray)
-        mapView.removeAnnotations(asiaArray)
-        mapView.removeAnnotations(australiaArray)
-        mapView.addAnnotations(continent)
-        print("after remove")
+        print("InBACK")
         mapView.scrollEnabled = true
         let left = CLLocationCoordinate2D(latitude: -75.708634, longitude: -15.097656)
         let right = CLLocationCoordinate2D(latitude: 84.322415, longitude: 146.621094)
@@ -133,7 +127,9 @@ class exploreListsVC : UIViewController, MGLMapViewDelegate{
         
         zurück.hidden = true
        zoomed = false
-        
+        settingAnnotations()
+        print("After BAck")
+        self.Container.addSubview(mapView)
     }
     
     func mapView(mapView: MGLMapView, imageForAnnotation annotation: MGLAnnotation) -> MGLAnnotationImage? {
@@ -152,10 +148,7 @@ class exploreListsVC : UIViewController, MGLMapViewDelegate{
         return true
     }
     
-//    func mapView(mapView: MGLMapView, regionDidChangeAnimated animated: Bool) {
-//        var zoom = mapView.zoomLevel
-//        print(zoom)
-//    }
+
     
     // wenn anotation angetippt wird
     func mapView(mapView: MGLMapView, didSelectAnnotation annotation: MGLAnnotation) {
@@ -166,41 +159,38 @@ class exploreListsVC : UIViewController, MGLMapViewDelegate{
     func mapView(mapView: MGLMapView, tapOnCalloutForAnnotation annotation: MGLAnnotation) {
         if zoomed == true{
             let detailViewController = storyboard?.instantiateViewControllerWithIdentifier("exploreListsDetailVC") as! exploreListsDetailVC
+            detailViewController.map = map
             navigationController?.pushViewController(detailViewController, animated: true)}
+        else{
         zoomlocation(annotation)
-        
-        mapView.addAnnotations(namericaArray)
-        mapView.addAnnotations(samericaArray)
-        mapView.addAnnotations(africaArray)
-        mapView.addAnnotations(europeArray)
-        mapView.addAnnotations(asiaArray)
-        mapView.addAnnotations(australiaArray)
-       mapView.removeAnnotations(continent)
+        settingAnnotations()
         mapView.setVisibleCoordinateBounds(map, animated: true)
-       
+        }
     }
     
-//    func settingAnnotations(){
-//        if zoomed == false{
-//            mapView.addAnnotations(namericaArray)
-//            mapView.addAnnotations(samericaArray)
-//            mapView.addAnnotations(africaArray)
-//            mapView.addAnnotations(europeArray)
-//            mapView.addAnnotations(asiaArray)
-//            mapView.addAnnotations(australiaArray)
-//            mapView.removeAnnotations(continent)
-//        }
-//        else {
-//            mapView.removeAnnotations(namericaArray)
-//            mapView.removeAnnotations(samericaArray)
-//            mapView.removeAnnotations(africaArray)
-//            mapView.removeAnnotations(europeArray)
-//            mapView.removeAnnotations(asiaArray)
-//            mapView.removeAnnotations(australiaArray)
-//            mapView.addAnnotations(continent)
-//
-//        }
-//    }
+    func settingAnnotations(){
+        if zoomed == false{
+            print("Annotations now are continent")
+            mapView.removeAnnotations(namericaArray)
+            mapView.removeAnnotations(samericaArray)
+            mapView.removeAnnotations(africaArray)
+            mapView.removeAnnotations(europeArray)
+            mapView.removeAnnotations(asiaArray)
+            mapView.removeAnnotations(australiaArray)
+            mapView.addAnnotations(continent)
+        }
+        else {
+            print("Annotations now are regions")
+            mapView.addAnnotations(namericaArray)
+            mapView.addAnnotations(samericaArray)
+            mapView.addAnnotations(africaArray)
+            mapView.addAnnotations(europeArray)
+            mapView.addAnnotations(asiaArray)
+            mapView.addAnnotations(australiaArray)
+            mapView.removeAnnotations(continent)
+
+        }
+    }
     
     
     
