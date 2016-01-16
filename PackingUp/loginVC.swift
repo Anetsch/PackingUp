@@ -30,11 +30,6 @@ class loginVC: UIViewController {
         passwordTf.layer.borderColor = (UIColor(red: 93.0/255, green: 122.0/255, blue: 96.0/255, alpha: 1.0)).CGColor
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
         view.addGestureRecognizer(tap)
-//        var visualEffectView = UIVisualEffectView(effect: UIBlurEffect(style: .Dark))
-//        
-//        visualEffectView.frame = backGround.bounds
-//        
-//        backGround.addSubview(visualEffectView)
     }
     
     //Calls this function when the tap is recognized.
