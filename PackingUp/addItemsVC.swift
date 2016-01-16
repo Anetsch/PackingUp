@@ -26,8 +26,10 @@ class addItemsVC : UIViewController,UIPickerViewDataSource,UIPickerViewDelegate 
         
         self.view.backgroundColor = UIColor(patternImage: image)
         
-        tfName.backgroundColor = UIColor(red: 160.0/255, green: 198.0/255, blue: 55.0/255, alpha: 1.0)
-        tfNumber.backgroundColor = UIColor(red: 160.0/255, green: 198.0/255, blue: 55.0/255, alpha: 1.0)
+        tfName.backgroundColor = UIColor(red: 113.0/255, green: 145.0/255, blue: 90.0/255, alpha: 0.5)
+        tfNumber.backgroundColor = UIColor(red: 113.0/255, green: 145.0/255, blue: 90.0/255, alpha: 0.5)
+        tfName.layer.borderColor = (UIColor(red: 93.0/255, green: 122.0/255, blue: 96.0/255, alpha: 1.0)).CGColor
+        tfNumber.layer.borderColor = (UIColor(red: 93.0/255, green: 122.0/255, blue: 96.0/255, alpha: 1.0)).CGColor
         
         myPicker.dataSource = self
         myPicker.delegate = self
@@ -47,7 +49,12 @@ class addItemsVC : UIViewController,UIPickerViewDataSource,UIPickerViewDelegate 
             return getValuefor(row)
             
     }
-    
+    func pickerView(pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
+        
+        let titleData = data[row]
+        let mytitle = NSAttributedString(string: titleData, attributes: [NSForegroundColorAttributeName : UIColor(red: 58.0/255, green: 80.0/255, blue: 94.0/255, alpha: 1.0)])
+        return mytitle
+    }
     func pickerView(pickerView: UIPickerView,
         didSelectRow row: Int,
         inComponent component: Int) {
@@ -56,6 +63,7 @@ class addItemsVC : UIViewController,UIPickerViewDataSource,UIPickerViewDelegate 
             print("Selected: \(row) and \(component)")
             
     }
+    
     let data = ["Bekleidung", "Elektronik", "Dokumente","Kosmetik",
         "Sport", "Reiseapotheke","Grundausstattung", "Sonstiges"]
     
@@ -65,6 +73,7 @@ class addItemsVC : UIViewController,UIPickerViewDataSource,UIPickerViewDelegate 
     
     func pickerView(pickerView: UIPickerView,
         numberOfRowsInComponent : Int) -> Int {
+            
             return data.count
     }
     

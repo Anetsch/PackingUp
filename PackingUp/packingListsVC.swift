@@ -64,11 +64,13 @@ class packingListsVC : UITableViewController, UIAlertViewDelegate {
         let alertController = UIAlertController(title: "Neue Packliste", message: "Bitte geben Sie den Namen für die neue Packliste ein", preferredStyle: .Alert)
         
         let cancelAction = UIAlertAction(title: "Abbrechen", style: .Cancel) { (action) in
-            print(action)
+           
         }
-        alertController.addAction(cancelAction)
+        
         let addAction = UIAlertAction(title: "Hinzufügen", style: .Default) { (action) in
             let listTextField = alertController.textFields![0] as UITextField
+            listTextField.backgroundColor = UIColor(red: 113.0/255, green: 145.0/255, blue: 90.0/255, alpha: 0.5)
+            listTextField.layer.borderColor = (UIColor(red: 93.0/255, green: 122.0/255, blue: 96.0/255, alpha: 1.0)).CGColor
             
             let newList = listTextField.text
             
@@ -83,13 +85,22 @@ class packingListsVC : UITableViewController, UIAlertViewDelegate {
 //##########Erst aktivieren wenn ein Buchstabe eingegeben wurde##########
         alertController.addTextFieldWithConfigurationHandler { (textField) in
             textField.placeholder = "Name"
+            textField.textColor = UIColor(red: 58.0/255, green: 80.0/255, blue: 94.0/255, alpha: 1.0)
+            
+            textField.keyboardAppearance = .Dark
             NSNotificationCenter.defaultCenter().addObserverForName(UITextFieldTextDidChangeNotification, object: textField, queue: NSOperationQueue.mainQueue()) { (notification) in
                 addAction.enabled = textField.text != ""
+                
             }
         }
         
+        alertController.addAction(cancelAction)
         alertController.addAction(addAction)
         
+        alertController.view.backgroundColor = UIColor(red: 58.0/255, green: 80.0/255, blue: 94.0/255, alpha: 1.0)
+       alertController.view.tintColor = UIColor(red: 58.0/255, green: 80.0/255, blue: 94.0/255, alpha: 1.0)
+        
+        alertController.view.layer.cornerRadius = 0.4 * alertController.view.bounds.size.width
         self.presentViewController(alertController, animated: true) { () -> Void in
             
         }
