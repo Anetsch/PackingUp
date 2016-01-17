@@ -118,7 +118,7 @@ class exploreListsVC : UIViewController, MGLMapViewDelegate{
     
     
     @IBAction func doZurück(sender: AnyObject) {
-        print("InBACK")
+        
         mapView.scrollEnabled = true
         let left = CLLocationCoordinate2D(latitude: -75.708634, longitude: -15.097656)
         let right = CLLocationCoordinate2D(latitude: 84.322415, longitude: 146.621094)
@@ -128,7 +128,7 @@ class exploreListsVC : UIViewController, MGLMapViewDelegate{
         zurück.hidden = true
        zoomed = false
         settingAnnotations()
-        print("After BAck")
+        
         self.Container.addSubview(mapView)
     }
     
@@ -170,7 +170,7 @@ class exploreListsVC : UIViewController, MGLMapViewDelegate{
     
     func settingAnnotations(){
         if zoomed == false{
-            print("Annotations now are continent")
+       
             mapView.removeAnnotations(namericaArray)
             mapView.removeAnnotations(samericaArray)
             mapView.removeAnnotations(africaArray)
@@ -180,7 +180,7 @@ class exploreListsVC : UIViewController, MGLMapViewDelegate{
             mapView.addAnnotations(continent)
         }
         else {
-            print("Annotations now are regions")
+           
             mapView.addAnnotations(namericaArray)
             mapView.addAnnotations(samericaArray)
             mapView.addAnnotations(africaArray)

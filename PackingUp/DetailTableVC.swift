@@ -12,7 +12,7 @@ import Mapbox
 
 class DetailTableVC : UITableViewController, MGLMapViewDelegate{
     
-    var packLists : [String] = ["BusinessTrip","Backpacking","Aktiv Urlaub"]
+    var packLists : [String] = ["Business Trip","Backpacking","Aktiv Urlaub"]
         var mapView: MGLMapView!
     var map = MGLCoordinateBounds()
     let resizingMask = UIViewAutoresizing.FlexibleWidth
@@ -27,7 +27,7 @@ class DetailTableVC : UITableViewController, MGLMapViewDelegate{
         mapView.zoomEnabled = false
         mapView.pitchEnabled = false
         mapView.rotateEnabled = false
-        mapView.scrollEnabled = true
+        mapView.scrollEnabled = false
         mapView.delegate = self
         mapView.setVisibleCoordinateBounds(map, animated: true)
         
