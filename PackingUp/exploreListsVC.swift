@@ -158,7 +158,7 @@ class exploreListsVC : UIViewController, MGLMapViewDelegate{
     //wenn anotation text angetippt wird
     func mapView(mapView: MGLMapView, tapOnCalloutForAnnotation annotation: MGLAnnotation) {
         if zoomed == true{
-            let detailViewController = storyboard?.instantiateViewControllerWithIdentifier("exploreListsDetailVC") as! exploreListsDetailVC
+            let detailViewController = storyboard?.instantiateViewControllerWithIdentifier("DetailTableVC") as! DetailTableVC
             detailViewController.map = map
             navigationController?.pushViewController(detailViewController, animated: true)}
         else{

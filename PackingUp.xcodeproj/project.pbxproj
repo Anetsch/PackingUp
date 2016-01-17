@@ -27,6 +27,8 @@
 		A94A41E11C25A7F700FCCF13 /* PackingUpTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94A41E01C25A7F700FCCF13 /* PackingUpTests.swift */; };
 		A94A41EC1C25A7F800FCCF13 /* PackingUpUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94A41EB1C25A7F800FCCF13 /* PackingUpUITests.swift */; };
 		A94C55771C4915FE00668299 /* exploreListsDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94C55761C4915FE00668299 /* exploreListsDetailVC.swift */; };
+		A9DD782B1C4BE6E600986E83 /* DetailTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9DD782A1C4BE6E600986E83 /* DetailTableVC.swift */; };
+		A9DD782D1C4BF78B00986E83 /* DetailSingleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9DD782C1C4BF78B00986E83 /* DetailSingleVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +79,8 @@
 		A94A41EB1C25A7F800FCCF13 /* PackingUpUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackingUpUITests.swift; sourceTree = "<group>"; };
 		A94A41ED1C25A7F800FCCF13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A94C55761C4915FE00668299 /* exploreListsDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = exploreListsDetailVC.swift; sourceTree = "<group>"; };
+		A9DD782A1C4BE6E600986E83 /* DetailTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailTableVC.swift; sourceTree = "<group>"; };
+		A9DD782C1C4BF78B00986E83 /* DetailSingleVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailSingleVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +139,8 @@
 				4B8539901C25C5250075A54B /* exploreListsVC.swift */,
 				4B85398E1C25C50C0075A54B /* packingListsVC.swift */,
 				4BAACDCD1C26C33700B00AE5 /* settingsVC.swift */,
+				A9DD782A1C4BE6E600986E83 /* DetailTableVC.swift */,
+				A9DD782C1C4BF78B00986E83 /* DetailSingleVC.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -395,6 +401,7 @@
 				4B4B68FA1C3D7F1B001092F6 /* addItemsVC.swift in Sources */,
 				4BAACDD51C271BA500B00AE5 /* itemsInListVC.swift in Sources */,
 				4B85398F1C25C50C0075A54B /* packingListsVC.swift in Sources */,
+				A9DD782D1C4BF78B00986E83 /* DetailSingleVC.swift in Sources */,
 				A94A41CC1C25A7F600FCCF13 /* AppDelegate.swift in Sources */,
 				4BAACDCE1C26C33700B00AE5 /* settingsVC.swift in Sources */,
 				4B85398D1C25B8560075A54B /* BackTableVC.swift in Sources */,
@@ -402,6 +409,7 @@
 				4BAACDD31C26C43100B00AE5 /* loginVC.swift in Sources */,
 				4B85398B1C25B06C0075A54B /* SWRevealViewController.m in Sources */,
 				A94C55771C4915FE00668299 /* exploreListsDetailVC.swift in Sources */,
+				A9DD782B1C4BE6E600986E83 /* DetailTableVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

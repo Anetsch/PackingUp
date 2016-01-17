@@ -10,9 +10,10 @@ import Foundation
 
 import Mapbox
 import Foundation
-class exploreListsDetailVC : UIViewController, MGLMapViewDelegate{
+class exploreListsDetailVC : UITableViewController, MGLMapViewDelegate{
     
     var mapView: MGLMapView!
+
 
     @IBOutlet weak var Container: UIView!
 
@@ -37,6 +38,9 @@ class exploreListsDetailVC : UIViewController, MGLMapViewDelegate{
         self.Container.addSubview(mapView)
 
     }
+
+
+    
 
 
 }

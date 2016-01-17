@@ -6,15 +6,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PackingUp/exploreListsVC.swift"
-            timestampString = "474245893.066931"
+            timestampString = "474739383.24371"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "164"
-            endingLineNumber = "164"
+            startingLineNumber = "161"
+            endingLineNumber = "161"
             landmarkName = "mapView(_:tapOnCalloutForAnnotation:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -26,13 +26,45 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PackingUp/exploreListsVC.swift"
-            timestampString = "474245893.066931"
+            timestampString = "474739385.415076"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "158"
-            endingLineNumber = "158"
-            landmarkName = "mapView(_:didSelectAnnotation:)"
+            startingLineNumber = "163"
+            endingLineNumber = "163"
+            landmarkName = "mapView(_:tapOnCalloutForAnnotation:)"
             landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PackingUp.exploreListsVC.mapView (PackingUp.exploreListsVC)(__ObjC.MGLMapView, tapOnCalloutForAnnotation : __ObjC.MGLAnnotation) -&gt; ()"
+                  moduleName = "PackingUp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Andi/Documents/AppleCode/PackingUp/PackingUp/exploreListsVC.swift"
+                  timestampString = "474739545.787223"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "163"
+                  endingLineNumber = "163"
+                  offsetFromSymbolStart = "504">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PackingUp.exploreListsVC.mapView (PackingUp.exploreListsVC)(__ObjC.MGLMapView, tapOnCalloutForAnnotation : __ObjC.MGLAnnotation) -&gt; ()"
+                  moduleName = "PackingUp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Andi/Documents/AppleCode/PackingUp/PackingUp/exploreListsVC.swift"
+                  timestampString = "474739545.787482"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "163"
+                  endingLineNumber = "163"
+                  offsetFromSymbolStart = "924">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
