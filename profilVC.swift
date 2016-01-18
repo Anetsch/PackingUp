@@ -15,7 +15,7 @@ class profilVC : UIViewController {
     @IBOutlet weak var tfEmail: UITextField!
     
     var imageMaleSelected = UIImage(named: "Männchen_ausgewählt")
-    var imageMaleNotSelected = UIImage(named: "Männchen_nicht_ausgewählt")
+    var imageMaleNotSelected = UIImage(named: "Männchen_nicht_ausgewählt-1")
     var imageFemaleSelected = UIImage(named:"Mädchen_ausgewählt")
     var imageFemaleNotSelected = UIImage(named:"Mädchen_nicht_ausgewählt")
     

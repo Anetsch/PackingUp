@@ -29,9 +29,9 @@ class packingListsVC : UITableViewController, UIAlertViewDelegate {
         
         self.tableView.rowHeight = 60.0
         
-        tableView.separatorColor = UIColor.whiteColor()
+        tableView.separatorColor = UIColor.clearColor()
         tableView.separatorStyle = .SingleLineEtched
-        tableView.opaque = false
+        tableView.opaque = true
     
     }
  

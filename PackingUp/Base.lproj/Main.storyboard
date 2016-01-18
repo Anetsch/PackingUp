@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="aSP-hM-YHA">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="aSP-hM-YHA">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
@@ -222,58 +222,64 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HqJ-YG-4dK">
-                                <rect key="frame" x="20" y="150" width="70" height="31"/>
+                                <rect key="frame" x="20" y="190" width="70" height="31"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.22745098039215686" green="0.31372549019607843" blue="0.36862745098039218" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BIw-Lv-d7N">
-                                <rect key="frame" x="20" y="238" width="280" height="37"/>
+                                <rect key="frame" x="20" y="278" width="280" height="37"/>
                                 <color key="backgroundColor" red="0.2274509804" green="0.31372549020000001" blue="0.36862745099999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <state key="normal" title="Anmelden">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Bl4-vG-TkU" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="zP8-n2-3UP"/>
+                                    <segue destination="YHN-IG-irU" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="jNg-sy-wHO"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Passwort:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Enc-Wy-N0M">
-                                <rect key="frame" x="20" y="189" width="75" height="21"/>
+                                <rect key="frame" x="20" y="229" width="75" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.22745098039215686" green="0.31372549019607843" blue="0.36862745098039218" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Noch keinen Account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zCh-hd-CBA">
-                                <rect key="frame" x="128" y="325" width="172" height="21"/>
+                                <rect key="frame" x="128" y="338" width="172" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.2274509804" green="0.31372549020000001" blue="0.36862745099999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IvY-Ug-gHG">
-                                <rect key="frame" x="104" y="151" width="196" height="30"/>
+                                <rect key="frame" x="104" y="191" width="196" height="30"/>
                                 <color key="tintColor" red="0.2274509804" green="0.31372549020000001" blue="0.36862745099999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="textColor" red="0.2274509804" green="0.31372549020000001" blue="0.36862745099999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardAppearance="alert"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JSo-Ar-WMf">
-                                <rect key="frame" x="104" y="185" width="196" height="30"/>
+                                <rect key="frame" x="104" y="225" width="196" height="30"/>
                                 <color key="tintColor" red="0.2274509804" green="0.31372549020000001" blue="0.36862745099999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="textColor" red="0.2274509804" green="0.31372549020000001" blue="0.36862745099999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardAppearance="alert" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EGw-oL-u9W">
-                                <rect key="frame" x="170" y="354" width="130" height="37"/>
+                                <rect key="frame" x="170" y="367" width="130" height="37"/>
                                 <color key="backgroundColor" red="0.2274509804" green="0.31372549020000001" blue="0.36862745099999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <state key="normal" title="Registrieren">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Packing UP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6rk-ST-RLs">
+                                <rect key="frame" x="95" y="119" width="130" height="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" red="0.2274509804" green="0.31372549020000001" blue="0.36862745099999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Logo_in_app" translatesAutoresizingMaskIntoConstraints="NO" id="hMZ-F9-ziL">
-                                <rect key="frame" x="112" y="39" width="97" height="83"/>
+                                <rect key="frame" x="120" y="46" width="81" height="70"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -288,7 +294,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5nD-PH-1al" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-533" y="-699"/>
+            <point key="canvasLocation" x="581" y="-1"/>
         </scene>
         <!--Back TableVC-->
         <scene sceneID="HhV-Lu-ZN4">
@@ -437,35 +443,35 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U62-06-qgh">
-                                <rect key="frame" x="90" y="294" width="61" height="112"/>
+                                <rect key="frame" x="101" y="284" width="50" height="89"/>
                                 <state key="normal" title="Female" image="Mädchen_nicht_ausgewählt"/>
                                 <connections>
                                     <action selector="buttonFemale:" destination="tFV-J5-BqY" eventType="touchUpInside" id="ab7-MI-it9"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s2t-MI-s9a">
-                                <rect key="frame" x="170" y="294" width="61" height="112"/>
-                                <state key="normal" title="Male" image="Männchen_nicht_ausgewählt"/>
-                                <connections>
-                                    <action selector="buttonMale:" destination="tFV-J5-BqY" eventType="touchUpInside" id="koh-gz-VDV"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vSl-5M-cQC">
                                 <rect key="frame" x="113" y="77" width="95" height="95"/>
                                 <state key="normal" title="Profil" image="jill-profile-round"/>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Julia Vogt" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8ZY-7d-dXO">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Julia Vogt" borderStyle="bezel" placeholder="Julia Vogt" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8ZY-7d-dXO">
                                 <rect key="frame" x="59" y="193" width="203" height="30"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="0.2274509804" green="0.31372549020000001" blue="0.36862745099999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardAppearance="alert" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="julia.vogt@hof-university.de" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HHJ-ye-Uqo">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="julia.vogt@hof-university.de" borderStyle="bezel" placeholder="julia.vogt@hof-university.de" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HHJ-ye-Uqo">
                                 <rect key="frame" x="59" y="239" width="203" height="30"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="0.2274509804" green="0.31372549020000001" blue="0.36862745099999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s2t-MI-s9a">
+                                <rect key="frame" x="159" y="284" width="50" height="89"/>
+                                <state key="normal" title="Male" image="Männchen_nicht_ausgewählt-1"/>
+                                <connections>
+                                    <action selector="buttonMale:" destination="tFV-J5-BqY" eventType="touchUpInside" id="koh-gz-VDV"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -505,8 +511,8 @@
                                 <rect key="frame" x="0.0" y="523" width="320" height="45"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ev2-2n-ifU">
-                                        <rect key="frame" x="21" y="11" width="81" height="26"/>
-                                        <color key="backgroundColor" red="0.2274509804" green="0.31372549020000001" blue="0.36862745099999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <rect key="frame" x="8" y="10" width="81" height="26"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="19"/>
                                         <state key="normal" title="&lt; Zurück">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -942,10 +948,10 @@
     <resources>
         <image name="Einstellungen" width="44" height="44"/>
         <image name="Entdecken-1" width="44" height="44"/>
-        <image name="Logo_in_app" width="97" height="83"/>
+        <image name="Logo_in_app" width="113" height="117"/>
         <image name="Logout-1" width="44" height="44"/>
         <image name="Mädchen_nicht_ausgewählt" width="91" height="167"/>
-        <image name="Männchen_nicht_ausgewählt" width="91" height="167"/>
+        <image name="Männchen_nicht_ausgewählt-1" width="91" height="167"/>
         <image name="Packliste" width="39" height="34"/>
         <image name="Profil bearbeiten-1" width="44" height="44"/>
         <image name="Thailand" width="1200" height="630"/>
@@ -958,6 +964,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="rhs-FA-wDC"/>
-        <segue reference="zP8-n2-3UP"/>
+        <segue reference="jNg-sy-wHO"/>
     </inferredMetricsTieBreakers>
 </document>
