@@ -51,6 +51,9 @@ class itemsInListVC : UITableViewController {
         
         tableView.backgroundView = backgroundView
         
+        tableView.separatorColor = UIColor.clearColor()
+        tableView.separatorStyle = .SingleLineEtched
+        tableView.opaque = true
       //  tableView.backgroundColor = UIColor(red: 160.0/255, green: 198.0/255, blue: 55.0/255, alpha: 0.5)
     }
     func buildImageView() -> UIImageView {

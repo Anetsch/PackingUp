@@ -959,7 +959,7 @@
         <image name="light_background_1" width="640" height="1136"/>
         <image name="light_background_2" width="640" height="1136"/>
         <image name="profil2" width="323" height="168"/>
-        <image name="starEmpty" width="512" height="512"/>
+        <image name="starEmpty" width="78" height="74"/>
         <image name="starFilled" width="78" height="74"/>
     </resources>
     <inferredMetricsTieBreakers>
