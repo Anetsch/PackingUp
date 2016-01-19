@@ -960,7 +960,7 @@
         <image name="light_background_2" width="640" height="1136"/>
         <image name="profil2" width="323" height="168"/>
         <image name="starEmpty" width="512" height="512"/>
-        <image name="starFilled" width="512" height="512"/>
+        <image name="starFilled" width="78" height="74"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="rhs-FA-wDC"/>

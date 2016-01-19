@@ -32,7 +32,7 @@ class itemsInListVC : UITableViewController {
         title = currentList
         kategory = ["Bekleidung", "Elektronik", "Dokumente","Kosmetik",
             "Sport", "Reiseapotheke","Grundausstattung", "Sonstiges"]
-        itemsBekleidung  = ["Hose","Schuhe","usw"]
+        itemsBekleidung  = ["Hose","Schuhe","T-Shirt"]
         itemsElektronik = ["Smartphone","Ladekabel","Föhn"]
         itemsDokumente = ["Smartphone","Ladekabel","Föhn"]
         itemsKosmetik = ["Zahnbürste","Zahncreme","Nagelschere","Brille","Hautcreme"]
